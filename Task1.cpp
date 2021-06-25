@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
 
         cvtColor(src, src_gray, COLOR_RGB2GRAY);
 
-        medianBlur(src_gray, src_gray, 3);
+        medianBlur(src_gray, src_gray, 1);
 
 
         threshold(src_gray, dst, 11, 255, 0); //tareshold

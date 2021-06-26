@@ -10,8 +10,7 @@
     {
         Mat srcImg = imread("1.jpg", IMREAD_COLOR);
         Mat src_gray;
-       // imshow("src", srcImg);
-        //Mat dstImg(srcImg.size(), CV_8UC3, Scalar::all(0));//pure black image
+
         Mat thresh, image_copy;
         cvtColor(srcImg, src_gray, COLOR_BGR2GRAY);
         medianBlur(src_gray, src_gray, 3);
@@ -31,7 +30,6 @@
                 cout << contours_poly[i].size() << endl;
                 image_copy = srcImg.clone();
                 if (contours_poly[i].size() == 2) {
-                   // drawContours(image_copy, contours_poly, i, Scalar(255, 0, 0), 2, 8);
                     drawContours(srcImg, contours, i, Scalar(255, 0, 0), 2, 8); //Draw
                 }
             }

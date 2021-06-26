@@ -35,7 +35,6 @@ void main() {
 	}
 	for (size_t i = 0; i < contours.size(); i++)
 	{
-		//drawContours(image_copy, contours_poly, (int)i, color);
 		rectangle(src, boundRect[i].tl(), boundRect[i].br(), Scalar(0,255,0), 2);
 	}
 

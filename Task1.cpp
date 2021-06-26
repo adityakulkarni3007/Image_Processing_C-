@@ -26,12 +26,9 @@ int main(int argc, char* argv[])
 {
         Mat src = imread("1.jpg", IMREAD_COLOR);
         namedWindow(window_name);
-        //cvMoveWindow(window_name, 5, 5);
 
         int MAX = 56;
-        //createTrackbar("MAX", window_name, &MAX, 300);
         int MIN = 52;
-        //createTrackbar("MIN", window_name, &MIN, 300);
         int BLACKLEVEL = 47;
 
         cvtColor(src, src_gray, COLOR_RGB2GRAY);
@@ -56,7 +53,6 @@ int main(int argc, char* argv[])
         }
 
         imshow(window_name, src);
-        //imshow("HSV", dst);
         waitKey(0);
 
  
